@@ -1,0 +1,607 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedesignedGoogleForms</RootNamespace>
+    <AssemblyName>RedesignedGoogleForms</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackPages\CreateNewAccount.aspx" />
+    <Content Include="BackPages\EditForm.aspx" />
+    <Content Include="BackPages\EditQuestion.aspx" />
+    <Content Include="BackPages\ForgotPWD.aspx" />
+    <Content Include="BackPages\Login.aspx" />
+    <Content Include="es\.gitignore" />
+    <Content Include="es\dist\css\bootstrap-datepicker.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="es\dist\js\bootstrap-datepicker.js" />
+    <Content Include="es\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.bm.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="es\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="es\docs\conf.py" />
+    <Content Include="es\docs\requirements.txt" />
+    <Content Include="es\docs\screenshots.js" />
+    <Content Include="es\docs\_screenshots\assets\common.css" />
+    <Content Include="es\docs\_screenshots\assets\common.js" />
+    <Content Include="es\docs\_screenshots\demo_head.html" />
+    <Content Include="es\docs\_screenshots\markup_component.html" />
+    <Content Include="es\docs\_screenshots\markup_daterange.html" />
+    <Content Include="es\docs\_screenshots\markup_inline.html" />
+    <Content Include="es\docs\_screenshots\markup_input.html" />
+    <Content Include="es\docs\_screenshots\option_calendarweeks.html" />
+    <Content Include="es\docs\_screenshots\option_clearbtn.html" />
+    <Content Include="es\docs\_screenshots\option_daysofweekdisabled.html" />
+    <Content Include="es\docs\_screenshots\option_enddate.html" />
+    <Content Include="es\docs\_screenshots\option_language.html" />
+    <Content Include="es\docs\_screenshots\option_multidate.html" />
+    <Content Include="es\docs\_screenshots\option_showweekdays.html" />
+    <Content Include="es\docs\_screenshots\option_startdate.html" />
+    <Content Include="es\docs\_screenshots\option_todaybtn.html" />
+    <Content Include="es\docs\_screenshots\option_todayhighlight.html" />
+    <Content Include="es\docs\_screenshots\option_weekstart.html" />
+    <Content Include="es\docs\_static\screenshots\demo_head.png" />
+    <Content Include="es\docs\_static\screenshots\markup_component.png" />
+    <Content Include="es\docs\_static\screenshots\markup_daterange.png" />
+    <Content Include="es\docs\_static\screenshots\markup_inline.png" />
+    <Content Include="es\docs\_static\screenshots\markup_input.png" />
+    <Content Include="es\docs\_static\screenshots\option_calendarweeks.png" />
+    <Content Include="es\docs\_static\screenshots\option_clearbtn.png" />
+    <Content Include="es\docs\_static\screenshots\option_daysofweekdisabled.png" />
+    <Content Include="es\docs\_static\screenshots\option_enddate.png" />
+    <Content Include="es\docs\_static\screenshots\option_language.png" />
+    <Content Include="es\docs\_static\screenshots\option_multidate.png" />
+    <Content Include="es\docs\_static\screenshots\option_showweekdays.png" />
+    <Content Include="es\docs\_static\screenshots\option_startdate.png" />
+    <Content Include="es\docs\_static\screenshots\option_todaybtn.png" />
+    <Content Include="es\docs\_static\screenshots\option_todayhighlight.png" />
+    <Content Include="es\docs\_static\screenshots\option_weekstart.png" />
+    <Content Include="es\Gruntfile.js" />
+    <Content Include="es\js\bootstrap-datepicker.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker-en-CA.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ar-DZ.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ar-tn.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.az.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.bm.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.bn.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.br.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.bs.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-AU.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-CA.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-GB.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-IE.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-NZ.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-US.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.en-ZA.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.eo.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.eu.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.fo.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.fr-CH.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.hi.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.hy.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.it-CH.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.kh.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.km.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ko.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.me.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.mn.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.mr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.no.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.oc.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.si.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sr-latin.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.ta.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.tg.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.tk.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.uz-cyrl.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.uz-latn.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="es\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="es\tests\assets\coverage.js" />
+    <Content Include="es\tests\assets\mock.js" />
+    <Content Include="es\tests\assets\qunit-logging.js" />
+    <Content Include="es\tests\assets\qunit.css" />
+    <Content Include="es\tests\assets\qunit.js" />
+    <Content Include="es\tests\assets\utils.js" />
+    <Content Include="es\tests\suites\calendar-weeks.js" />
+    <Content Include="es\tests\suites\component.js" />
+    <Content Include="es\tests\suites\data-api.js" />
+    <Content Include="es\tests\suites\events.js" />
+    <Content Include="es\tests\suites\formats.js" />
+    <Content Include="es\tests\suites\inline.js" />
+    <Content Include="es\tests\suites\keyboard_navigation\2011.js" />
+    <Content Include="es\tests\suites\keyboard_navigation\2012.js" />
+    <Content Include="es\tests\suites\keyboard_navigation\all.js" />
+    <Content Include="es\tests\suites\methods.js" />
+    <Content Include="es\tests\suites\methods_jquery.js" />
+    <Content Include="es\tests\suites\mouse_navigation\2011.js" />
+    <Content Include="es\tests\suites\mouse_navigation\2012.js" />
+    <Content Include="es\tests\suites\mouse_navigation\all.js" />
+    <Content Include="es\tests\suites\noconflict.js" />
+    <Content Include="es\tests\suites\options.js" />
+    <Content Include="es\tests\suites\timezone.js" />
+    <Content Include="es\tests\suites\touch_navigation\all.js" />
+    <Content Include="es\tests\tests.html" />
+    <Content Include="es\tests\timezone.html" />
+    <Content Include="EntryPages\EntryPage.aspx" />
+    <Content Include="BackPages\FormSearch.aspx" />
+    <Content Include="ExternalTools\css\bootstrap-grid.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap.css" />
+    <Content Include="ExternalTools\css\bootstrap.min.css" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.min.css" />
+    <Content Include="ExternalTools\jquery-3.6.0.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.js" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.esm.js" />
+    <Content Include="ExternalTools\js\bootstrap.esm.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.js" />
+    <Content Include="ExternalTools\js\bootstrap.min.js" />
+    <Content Include="FrontPages\AnserForm.aspx" />
+    <Content Include="FrontPages\FormSearchUser.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="MasterPages\Pics\calendar.png" />
+    <Content Include="MasterPages\Pics\Duck.png" />
+    <Content Include="MasterPages\Pics\icon.png" />
+    <Content Include="MasterPages\Pics\magnifier.png" />
+    <Content Include="MasterPages\Pics\system.png" />
+    <Content Include="MasterPages\Pics\user.png" />
+    <Content Include="MasterPages\Pics\website menu.png" />
+    <Content Include="test\DontTaiXinZen.aspx" />
+    <Content Include="test\textLabelAddUrl.aspx" />
+    <Content Include="test\ucPagerTest.aspx" />
+    <Content Include="test\WebForm1.aspx" />
+    <Content Include="test\WebForm2.aspx" />
+    <Content Include="UserCtrl\ucPager.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackPages\CreateNewAccount.aspx.cs">
+      <DependentUpon>CreateNewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\CreateNewAccount.aspx.designer.cs">
+      <DependentUpon>CreateNewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPages\EditForm.aspx.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\EditForm.aspx.designer.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPages\EditQuestion.aspx.cs">
+      <DependentUpon>EditQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\EditQuestion.aspx.designer.cs">
+      <DependentUpon>EditQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPages\ForgotPWD.aspx.cs">
+      <DependentUpon>ForgotPWD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\ForgotPWD.aspx.designer.cs">
+      <DependentUpon>ForgotPWD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntryPages\EntryPage.aspx.cs">
+      <DependentUpon>EntryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntryPages\EntryPage.aspx.designer.cs">
+      <DependentUpon>EntryPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackPages\FormSearch.aspx.cs">
+      <DependentUpon>FormSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackPages\FormSearch.aspx.designer.cs">
+      <DependentUpon>FormSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontPages\AnserForm.aspx.cs">
+      <DependentUpon>AnserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontPages\AnserForm.aspx.designer.cs">
+      <DependentUpon>AnserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontPages\FormSearchUser.aspx.cs">
+      <DependentUpon>FormSearchUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontPages\FormSearchUser.aspx.designer.cs">
+      <DependentUpon>FormSearchUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\FrontMaster.Master.cs">
+      <DependentUpon>FrontMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\FrontMaster.Master.designer.cs">
+      <DependentUpon>FrontMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\DontTaiXinZen.aspx.cs">
+      <DependentUpon>DontTaiXinZen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\DontTaiXinZen.aspx.designer.cs">
+      <DependentUpon>DontTaiXinZen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\textLabelAddUrl.aspx.cs">
+      <DependentUpon>textLabelAddUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\textLabelAddUrl.aspx.designer.cs">
+      <DependentUpon>textLabelAddUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\ucPagerTest.aspx.cs">
+      <DependentUpon>ucPagerTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\ucPagerTest.aspx.designer.cs">
+      <DependentUpon>ucPagerTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\ucPager.ascx.cs">
+      <DependentUpon>ucPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\ucPager.ascx.designer.cs">
+      <DependentUpon>ucPager.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalTools\css\bootstrap-grid.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.min.css.map" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.min.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.esm.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.esm.min.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.min.js.map" />
+    <Content Include="MasterPages\FrontMaster.Master" />
+    <Content Include="es\.editorconfig" />
+    <Content Include="es\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="es\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="es\.github\workflows\ci.yaml" />
+    <Content Include="es\bower.json" />
+    <Content Include="es\build\build.less" />
+    <Content Include="es\build\build3.less" />
+    <Content Include="es\build\build_standalone.less" />
+    <Content Include="es\build\build_standalone3.less" />
+    <Content Include="es\CHANGELOG.md" />
+    <Content Include="es\CODE_OF_CONDUCT.md" />
+    <Content Include="es\composer.json" />
+    <Content Include="es\CONTRIBUTING.md" />
+    <Content Include="es\dist\css\bootstrap-datepicker.css.map" />
+    <Content Include="es\dist\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.css.map" />
+    <Content Include="es\dist\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="es\docs\events.rst" />
+    <Content Include="es\docs\i18n.rst" />
+    <Content Include="es\docs\index.rst" />
+    <Content Include="es\docs\keyboard.rst" />
+    <Content Include="es\docs\make.bat" />
+    <Content Include="es\docs\Makefile" />
+    <Content Include="es\docs\markup.rst" />
+    <Content Include="es\docs\methods.rst" />
+    <Content Include="es\docs\options.rst" />
+    <Content Include="es\docs\README.md" />
+    <Content Include="es\grunt\.jshintrc" />
+    <Content Include="es\js\.jscsrc" />
+    <Content Include="es\js\.jshintrc" />
+    <Content Include="es\less\.csslintrc" />
+    <Content Include="es\less\datepicker.less" />
+    <Content Include="es\less\datepicker3.less" />
+    <Content Include="es\LICENSE" />
+    <Content Include="es\package.json" />
+    <Content Include="es\README.md" />
+    <Content Include="es\tests\README.md" />
+    <Content Include="es\yarn.lock" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBTools\DBTools.csproj">
+      <Project>{FE397000-99DD-4270-A591-BAF139720876}</Project>
+      <Name>DBTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MatchAuth\MatchAuth.csproj">
+      <Project>{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}</Project>
+      <Name>MatchAuth</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61917</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61917/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

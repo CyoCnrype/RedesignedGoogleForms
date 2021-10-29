@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontMaster.master.cs" Inherits="VaccineMatchingSystem.MasterPages.FrontMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
+    <script src="../ExternalTools/js/bootstrap.js"></script>
+    <script src="../ExternalTools/jquery-3.6.0.min.js"></script>
+
+    <style>
+        divAnimate {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            15% {
+                left: 150px;
+                top: 100px;
+            }
+
+            30% {
+                left: 350px;
+                top: 10px;
+            }
+
+            50% {
+                left: 650px;
+                top: 0px;
+            }
+
+            65% {
+                left: 950px;
+                top: 0px;
+            }
+
+            85% {
+                left: 1200px;
+                top: 70px;
+            }
+
+            100% {
+                left: 1450px;
+                top: 0px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <div class="container" style="height: 130px; background-color: rgb(240,240,240);">
+            <br />
+            <table>
+                <tr>
+
+                    <td width="30%" align="left">
+                        <h1>
+                            <img src="../MasterPages/Pics/Duck.png" width="50" height="50" />
+                            <asp:Label ID="Label1" runat="server">自訂表單填寫系統</asp:Label>
+                        </h1>
+                    </td>
+
+                    <td width="40%" align="center"></td>
+
+                    <td width="30%" align="right">
+                        <img src="../MasterPages/Pics/website menu.png" width="20" height="20" />
+                        <%--回首頁功能--%>
+                        <asp:Button ID="btnReturnEntryPoint" runat="server" Text="回首頁" OnClick="btnReturnEntryPoint_Click" />
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-md-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <!--這裡放小鴨動畫-->
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="container col-md-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!--這裡放主要內容-->
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="col-md-4">
+        </div>
+
+
+
+        <div class="container" style="height: 110px; background-color: rgb(240,240,240);">
+            <br />
+            <table>
+                <tr>
+
+                    <td width="30%" align="left"></td>
+
+                    <td width="40%" align="center">
+                        <h4>
+                            <asp:Label CssClass="align-bottom" ID="Label3" runat="server">Copyright © [2021] [Yellow Duck]</asp:Label>
+                        </h4>
+                    </td>
+
+                    <td></td>
+
+                    <td width="30%" align="right">
+
+                        <h4>
+                            <img src="../MasterPages/Pics/Duck.png" style="height: 63px; width: 60px" id="icon" />
+                            <asp:Label runat="server" ID="Label2">7302 黃色小鴨集團</asp:Label>
+                        </h4>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </form>
+</body>
+</html>

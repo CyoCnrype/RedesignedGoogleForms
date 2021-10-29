@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedesignedGoogleForms", "RedesignedGoogleForms\RedesignedGoogleForms.csproj", "{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTools", "DBTools\DBTools.csproj", "{FE397000-99DD-4270-A591-BAF139720876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchAuth", "MatchAuth\MatchAuth.csproj", "{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1AFDB4-6797-4DBA-A5C2-942B3F4B910E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE397000-99DD-4270-A591-BAF139720876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE397000-99DD-4270-A591-BAF139720876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE397000-99DD-4270-A591-BAF139720876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE397000-99DD-4270-A591-BAF139720876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9626B6EA-982C-4BBE-AFA2-18EDBCC9E1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFB8453-EC5E-43EE-A5CD-1CD4421DE7DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {191B1CFC-AD50-442B-9616-F8E7E72DB247}
+	EndGlobalSection
+EndGlobal
