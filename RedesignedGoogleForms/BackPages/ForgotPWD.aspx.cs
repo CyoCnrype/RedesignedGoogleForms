@@ -116,7 +116,8 @@ namespace RedesignedGoogleForms.EntryPages
 
         protected void btnBackToLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EntryPage.aspx");
+            Response.Redirect("/EntryPages/EntryPage.aspx");
+
         }
     }
 

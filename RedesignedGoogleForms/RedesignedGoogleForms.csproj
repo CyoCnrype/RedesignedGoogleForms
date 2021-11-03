@@ -72,6 +72,7 @@
     <Content Include="BackPages\EditQuestion.aspx" />
     <Content Include="BackPages\ForgotPWD.aspx" />
     <Content Include="BackPages\Login.aspx" />
+    <Content Include="Diary.txt" />
     <Content Include="es\.gitignore" />
     <Content Include="es\dist\css\bootstrap-datepicker.css" />
     <Content Include="es\dist\css\bootstrap-datepicker.min.css" />

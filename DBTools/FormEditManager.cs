@@ -77,11 +77,10 @@ namespace DBTools
                              ,[FormEndTime]                =@FormEndTime
                              ,[FormDescription]           =@FormDescription
                              ,[FormCount]                     =@FormCount
-                             ,[FormID]                             =@FormID
                              ,[FormIsDeleted]               =@FormIsDeleted
 
 
-                    WHERE [FormID] = @FormNumber 
+                    WHERE [FormID] = @FormID 
                 ";
             List<SqlParameter> list = new List<SqlParameter>();
             //list.Add(new SqlParameter("@FormTag", ""));

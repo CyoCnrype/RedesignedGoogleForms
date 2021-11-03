@@ -16,7 +16,6 @@ namespace DBTools
             string val = ConfigurationManager.ConnectionStrings["DefaultConnectionString"].ConnectionString;
             return val;
         }
-
         /// <summary>
         /// 從DB取得DataTable
         /// </summary>
@@ -42,7 +41,6 @@ namespace DBTools
                 }
             }
         }
-
         /// <summary>
         /// 從DB取得DataRow
         /// </summary>
@@ -73,7 +71,6 @@ namespace DBTools
                 }
             }
         }
-
         /// <summary>
         /// 變更DB用
         /// </summary>
@@ -96,7 +93,6 @@ namespace DBTools
                 }
             }
         }
-
         public static void CreatData(string connStr, string dbCommand, List<SqlParameter> paramList)
         {
             // connect db & execute

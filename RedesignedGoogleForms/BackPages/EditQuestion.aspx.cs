@@ -100,8 +100,6 @@ namespace RedesignedGoogleForms.BackPages
             Ctl_count++;
             ViewState["Ctl_count"] = Ctl_count;
         }
-
-
         /// <summary>
         /// 按鈕：新增問題
         /// </summary>
@@ -171,7 +169,6 @@ namespace RedesignedGoogleForms.BackPages
             this.QusetionView.DataBind();
 
         }
-
         /// <summary>
         /// 當問題種類變化時
         /// </summary>
@@ -204,7 +201,6 @@ namespace RedesignedGoogleForms.BackPages
                     return;
             }
         }
-
         /// <summary>
         /// 確認問題種類變化
         /// </summary>
@@ -241,7 +237,6 @@ namespace RedesignedGoogleForms.BackPages
                     return;
             }
         }
-
         /// <summary>
         /// 選項數量歸0
         /// </summary>
@@ -253,21 +248,16 @@ namespace RedesignedGoogleForms.BackPages
             Session["txbList"] = new List<TextBox>(); ;
             Panel1.Controls.Clear();
         }
-
         protected void QusetionView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
         }
-
-
-
         /// <summary>
         /// 把選項變成JSON字串
         /// </summary>
         /// <param name="questionType"></param>
         /// <returns></returns>
-        private string CreateSelectionString(string questionType
-            )
+        private string CreateSelectionString(string questionType)
         {
             string answer;
             List<string> ansList = new List<string>();
@@ -284,7 +274,6 @@ namespace RedesignedGoogleForms.BackPages
             answer = SerializerHelper.JsonSerializer(ansList);
             return answer;
         }
-
         /// <summary>
         /// 算出有效選項數
         /// </summary>
@@ -307,7 +296,6 @@ namespace RedesignedGoogleForms.BackPages
             //answer = SerializerHelper.JsonSerializer(ansList);
             return answer;
         }
-
         /// <summary>
         /// 確認送出所有問題
         /// </summary>
@@ -328,16 +316,19 @@ namespace RedesignedGoogleForms.BackPages
             }
 
             //判斷是否是既有Form，無則一併新增
-            if ((bool)Session["IsNewForm"])
-                FormEditManager.InsertNewForm(currentForm);
-            else
+            bool isNewForm = (bool)Session["IsNewForm"];
+            if (isNewForm)
             {
                 FormEditManager.InsertNewForm(currentForm);
+                Response.Write("<Script language='JavaScript'>alert('問卷新增成功!'); location.href='/EntryPages/EntryPage.aspx'; </Script>");
+            }
+            else
+            {
+                FormEditManager.UpdateForm(currentForm);
+                Response.Write("<Script language='JavaScript'>alert('修改新增成功!'); location.href='/EntryPages/EntryPage.aspx'; </Script>");
             }
 
-            Response.Write("<Script language='JavaScript'>alert('問卷新增成功!'); location.href='/EntryPages/EntryPage.aspx'; </Script>");
         }
-
         /// <summary>
         /// 取消、回搜尋
         /// </summary>
@@ -348,7 +339,6 @@ namespace RedesignedGoogleForms.BackPages
             Session.Clear();
             Response.Redirect("FormSearch.aspx");
         }
-
         protected void btnDeleteQuestions_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < QusetionView.Rows.Count; i++)
